@@ -4,7 +4,7 @@ export interface Row {
   price_abc: number,
   price_def: number,
   ratio: number,
-  timestamp: date,
+  timestamp: Date,
   upper_bound: number,
   lower_bound: number,
   trigger_alert: number | undefined,
@@ -28,6 +28,5 @@ export class DataManipulator {
         lower_bound: lowerBound,
         trigger_alert: (ratio > upperBound || ratio < lowerBound ) ? ratio : undefined,
       };
-    })
-  }
-}
+    }
+
